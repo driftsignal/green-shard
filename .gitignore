@@ -1,4 +1,27 @@
-#*#
-*.#*
+# toc
+# - backup files
+# - modules
+# - password files
+# - eosio
+
+
+# backup files
+
+*#*#
+*.swp
+~*
+
+
+# modules
 
 node_modules
+
+
+# password files
+
+*labrynth*
+
+
+# eosio
+
+eosio-volume/

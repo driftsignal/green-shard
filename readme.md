@@ -7,6 +7,7 @@ pull recent blocks to create GraphQL endpoints
 
 - [install]
 - [run]
+  - [docker]
 - [code style]
 - [todo]
 - [done]
@@ -15,14 +16,20 @@ pull recent blocks to create GraphQL endpoints
 ## install
 
 
-
-### run
-
+## run
 
 
-### code style
+#### docker
+
+    # start docker service on archlinux
+    systemctl start docker
+    docker-compose up
 
 
+
+## code style
+
+using [standard js].
 
 ## todo
 
@@ -33,8 +40,12 @@ pull recent blocks to create GraphQL endpoints
 [install]:#install
 
 [run]:#run
+  [docker]:#docker
 
 [code style]:#code-style
 
 [todo]:#todo
 [done]:#done
+
+
+[standard js]: https://standardjs.com/

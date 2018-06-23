@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/driftsignal/green-shard#readme",
   "dependencies": {
-    "graphql": "^0.13.2"
+    "eosjs": "^15.0.3",
+    "graphql": "^0.13.2",
+    "jasmine": "^3.1.0"
   }
 }
