@@ -22,14 +22,14 @@ pull recent blocks to create GraphQL endpoints
 
 ## run
 
-   # see docker below if not already setup
-   # for just looking
-   node server
-   # for dev
-   # if you have global nodemon
-   nodemon
-   # or else
-   ./node_modules/nodemon/bin/nodemon.js
+    # see docker below if not already setup
+    # for just looking
+    node server
+    # for dev
+    # if you have global nodemon
+    nodemon
+    # or else
+    ./node_modules/nodemon/bin/nodemon.js
 
 ### docker
 
