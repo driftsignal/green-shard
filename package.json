@@ -1,0 +1,27 @@
+{
+  "name": "green-shard",
+  "version": "1.0.0",
+  "description": "pull recent blocks to create GraphQL endpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/driftsignal/green-shard.git"
+  },
+  "keywords": [
+    "eos",
+    "graphql",
+    "node"
+  ],
+  "author": "driftsignal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/driftsignal/green-shard/issues"
+  },
+  "homepage": "https://github.com/driftsignal/green-shard#readme",
+  "dependencies": {
+    "graphql": "^0.13.2"
+  }
+}
