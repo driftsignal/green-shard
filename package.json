@@ -1,6 +1,6 @@
 {
   "name": "green-shard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pull recent blocks to create GraphQL endpoints",
   "main": "server.js",
   "scripts": {
