@@ -1,6 +1,6 @@
 ## green-shard
 
-pull recent blocks to create GraphQL endpoints
+pull recent blocks to create a GraphQL endpoint
 
 
 ## toc
