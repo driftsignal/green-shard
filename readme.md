@@ -15,9 +15,15 @@ pull recent blocks to create GraphQL endpoints
 
 ## install
 
+    npm install
 
 ## run
 
+   # see docker below if not already setup
+   # if you have global nodemon
+   nodemon
+   # else
+   ./node_modules/nodemon/bin/nodemon.js
 
 #### docker
 
@@ -33,9 +39,13 @@ using [standard js].
 
 ## todo
 
-
+- figure out hash and action count
+- add button for raw response
 
 ## done
+
+- use async / await to pull latest block
+- make graphql endpoint
 
 [install]:#install
 
