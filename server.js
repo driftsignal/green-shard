@@ -4,7 +4,7 @@ const graphqlHTTP = require('express-graphql')
 const { buildSchema } = require('graphql')
 const lastBlock = require('./gs-eos.js')
 
-// create graph central function
+// create graph central function return created app
 const mkgraph = async (port = 4000) => {
   const last = await lastBlock().catch(err => console.error(err))
   const schema = mkschema()

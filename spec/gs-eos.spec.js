@@ -1,9 +1,14 @@
 const lastBlock = require('../gs-eos.js')
 
-describe('gsEos', () => {
-  it('verifies block number returned is number', async () => {
+describe('retrieved EOS block', () => {
+  it('verifies block id returned is a string', async () => {
     const last = await lastBlock()
-          .then(result => typeof (result['block_num'] || null))
-    expect(last === 'number').toBe(true)
+          .then(result => typeof (result['id'] || null))
+    expect(last).toBe('string')
+  })
+  it('verifies block input_transactions returned is a array', async () => {
+    const last = await lastBlock()
+          .then(result => typeof (result['input_transactions'] || null))
+    expect(last).toBe('object')
   })
 })
