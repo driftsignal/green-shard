@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Raw Block Data
+    meta name="keywords" content="eosio eosjs simple"
+    meta name="author" content=this.author
+    style type='text/css'
+      | body { color: #0ac; background: #000; font-size: 1.2em; }
+
+  body
+    h1 Get Raw Block Data
+    form action='' method='get'
+      input type='hidden' name='last' value=''
+      input type='submit' name='getLast' value='Get Latest'
+    p
+      pre = this.isLast

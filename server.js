@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const graphqlHTTP = require('express-graphql')
 const { buildSchema } = require('graphql')
@@ -26,6 +27,7 @@ function mkschema () {
 }
 
 // makes and returns endpoints
+//   last - most recent block element
 function mkend (last) {
   // The root provides a resolver function for each API endpoint
   return {
@@ -37,17 +39,30 @@ function mkend (last) {
 }
 
 // makes app and routes
+//   port - port app runs on
+//   schema - graphql layout
+//   root - grapql resolvers
+//   last - most recent block element
+// returns app
 function mkapp ({port, schema, root, last}) {
   const app = express()
+  app.set('views', path.join(__dirname, 'views'))
+  app.set('view engine', 'slm')
+  app.set('json spaces', 60)
+
   app.use('/graphql', graphqlHTTP({
     schema: schema,
     rootValue: root,
     graphiql: true
   }))
 
-  app.set('json spaces', 60)
-  app.get('/', (req, res) =>
-          res.send(`<pre>${JSON.stringify(last, null, 2)}</pre>`))
+  app.get('/', (req, res) => {
+    const lastJson = req.param('getLast')
+          ? JSON.stringify(last, null, 2) : null
+    app.render('index', {isLast: lastJson}, (err, htm) => {
+      err ? res.send(500) : res.send(htm)
+    })
+  })
 
   app.listen(port)
   console.log('Running a GraphQL API server at localhost:4000/graphql')
