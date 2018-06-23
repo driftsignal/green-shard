@@ -28,5 +28,8 @@
     "graphql": "^0.13.2",
     "jasmine": "^3.1.0",
     "nodemon": "^1.17.5"
+  },
+  "devDependencies": {
+    "request": "^2.87.0"
   }
 }

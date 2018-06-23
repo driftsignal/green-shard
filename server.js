@@ -4,12 +4,12 @@ const { buildSchema } = require('graphql')
 const lastBlock = require('./gs-eos.js')
 
 // create graph central function
-const mkgraph = async () => {
+const mkgraph = async (port = 4000) => {
   const last = await lastBlock().catch(err => console.error(err))
   const schema = mkschema()
   const root = mkend(last)
 
-  mkapp({schema, root, last})
+  return mkapp({port, schema, root, last})
 }
 
 // makes and returns the graphql schema
@@ -37,7 +37,7 @@ function mkend (last) {
 }
 
 // makes app and routes
-function mkapp ({schema, root, last}) {
+function mkapp ({port, schema, root, last}) {
   const app = express()
   app.use('/graphql', graphqlHTTP({
     schema: schema,
@@ -47,10 +47,13 @@ function mkapp ({schema, root, last}) {
 
   app.set('json spaces', 60)
   app.get('/', (req, res) =>
-          res.send(`<pre>${JSON.stringify(last, null, 1)}</pre>`))
+          res.send(`<pre>${JSON.stringify(last, null, 2)}</pre>`))
 
-  app.listen(4000)
+  app.listen(port)
   console.log('Running a GraphQL API server at localhost:4000/graphql')
+  return app
 }
 
-mkgraph()
+module.exports = mkgraph
+
+if (require.main === module) mkgraph()
