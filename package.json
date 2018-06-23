@@ -2,7 +2,7 @@
   "name": "green-shard",
   "version": "1.0.0",
   "description": "pull recent blocks to create GraphQL endpoints",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jasmine"
   },
@@ -23,7 +23,10 @@
   "homepage": "https://github.com/driftsignal/green-shard#readme",
   "dependencies": {
     "eosjs": "^15.0.3",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
-    "jasmine": "^3.1.0"
+    "jasmine": "^3.1.0",
+    "nodemon": "^1.17.5"
   }
 }
