@@ -27,7 +27,8 @@
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
     "jasmine": "^3.1.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "slm": "^2.0.0"
   },
   "devDependencies": {
     "request": "^2.87.0"
