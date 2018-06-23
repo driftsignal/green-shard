@@ -1,4 +1,10 @@
-const gsEos = require('../gs-eos.js')
+const lastBlock = require('../gs-eos.js')
 
 describe('gsEos', () => {
+  it('verifies block number returned is number', async () => {
+    const last = await lastBlock()
+          .then(result => typeof result['block_num'])
+    console.log(last)
+    expect(last === 'number').toBe(true)
+  })
 })
