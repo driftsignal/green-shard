@@ -1,5 +1,7 @@
 const lastBlock = require('../gs-eos.js')
 
+// todo: get last in function and have it call
+// tests so can abstract
 describe('retrieved EOS block', () => {
   it('verifies block id returned is a string', async () => {
     const last = await lastBlock()
