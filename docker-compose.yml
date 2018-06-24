@@ -9,3 +9,9 @@ services:
     volumes:
       - ./eosio-volume/config:/opt/eosio/bin/data-dir
       - ./eosio-volume/data:/opt/eosio/var
+  echo:
+    image: postgres:alpine
+    restart: always
+    env_file: .env
+    ports:
+      - "5433:5432"

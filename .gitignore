@@ -17,9 +17,10 @@
 node_modules
 
 
-# password files
+# secret files
 
 *labrynth*
+*.env
 
 
 # eosio

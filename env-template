@@ -1,0 +1,3 @@
+POSTGRES_PASSWORD=<pass>
+# replaces postgres user
+POSTGRES_USER=<user>
