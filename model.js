@@ -13,6 +13,7 @@ const dbRun = async (aquery) => {
   })
 
   await client.connect()
+    .catch(err => console.error('connecion error', err.stack))
 
   const res = await client.query(...aquery)
   await client.end()

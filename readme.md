@@ -61,6 +61,12 @@ using [standard js].
 
 - figure out hash and action count
 - save the raw output to postgress
+- display saved output
+- make db persistant
+- update db tables following spec
+- make db tables for region, cycle, read, write
+  and transactions
+- create test with sqlite3 to test init-db
 - find more reliable way to test html
 - filter sql queries
 - deploy to heroku?
