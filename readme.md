@@ -19,6 +19,10 @@ pull recent blocks to create a GraphQL endpoint
     git clone git@github.com:driftsignal/green-shard.git
     cd green-shared/
     npm install
+    cp env-template .env
+    # edit values to suit your environment
+    vi .env
+    node init-db.js
 
 ## run
 
@@ -56,8 +60,9 @@ using [standard js].
 ## todo
 
 - figure out hash and action count
-- req.params instead of param
 - save the raw output to postgress
+- find more reliable way to test html
+- filter sql queries
 - deploy to heroku?
 - look for caching?
 
@@ -66,6 +71,7 @@ using [standard js].
 - use async / await to pull latest block
 - make graphql endpoint
 - add button for raw response
+- req.params instead of param
 
 [install]:#install
 

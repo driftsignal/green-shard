@@ -1,4 +1,5 @@
 POSTGRES_PASSWORD=<pass>
 # replaces postgres user
 POSTGRES_USER=<user>
-POSTGRES_HOST=<host>
+POSTGRES_HOST=0.0.0.0
+POSTGRES_PORT=5433
