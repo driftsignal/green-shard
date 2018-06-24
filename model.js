@@ -12,13 +12,22 @@ const dbRun = async (aquery) => {
     password: await conf('POSTGRES_PASSWORD')
   })
 
-  await client.connect()
-    .catch(err => console.error('connecion error', err.stack))
+  let aerr = null
 
-  const res = await client.query(...aquery)
-  await client.end()
+  await client.connect().catch(err => aerr = err)
+  if (aerr) return null
+
+  const res = await client.query(...aquery).catch(err => aerr = err)
+  if (aerr) return null
+  await client.end().catch(err => aerr = err)
+  if (aerr) return null
 
   return res
 }
 
 module.exports = dbRun
+
+if (require.main === module) {
+  dbRun(['SELECT $1::text as message', ['doom']])
+    .then(res => console.log(res.rows[0].message))
+}

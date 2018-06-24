@@ -59,6 +59,7 @@ using [standard js].
 
 ## todo
 
+- test and abstract error handling
 - figure out hash and action count
 - save the raw output to postgress
 - display saved output
