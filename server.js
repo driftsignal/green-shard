@@ -57,7 +57,7 @@ function mkapp ({port, schema, root, last}) {
   }))
 
   app.get('/', (req, res) => {
-    const lastJson = req.param('getLast')
+    const lastJson = req.query.getLast
           ? JSON.stringify(last, null, 2) : null
     app.render('index', {isLast: lastJson}, (err, htm) => {
       err ? res.send(500) : res.send(htm)

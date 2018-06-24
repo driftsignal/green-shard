@@ -56,8 +56,10 @@ using [standard js].
 ## todo
 
 - figure out hash and action count
-- save the raw output to postgress
 - req.params instead of param
+- save the raw output to postgress
+- deploy to heroku?
+- look for caching?
 
 ## done
 
