@@ -10,7 +10,8 @@ html
   body
     h1 Get Raw Block Data
     form action='' method='get'
-      input type='hidden' name='last' value=''
+      input type='hidden' name='last' value='${this.isLast}'
       input type='submit' name='getLast' value='Get Latest'
+      input type='submit' name='saveLast' value='Save Latest'
     p
       pre = this.isLast
